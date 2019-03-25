@@ -299,18 +299,6 @@ if __name__ == '__main__':
                         #fencetest=bool(testcontract.transact({'from':web3.eth.coinbase}).Fence())
                         fencetest=True
                         if fencetest == True:
-                                #dist1=distance()
-                                #dist2=distance()
-                                #dist3=distance()
-                                #dist= (dist1 + dist2 + dist3)/3
-                                #distTx=int(dist1)
-                                #Nodecount=int(testcontract.call().Nodecount())
-                                #print("NodeCount=%d" % Nodecount)
-                                #Floodcount=int(testcontract.call().floodcount())
-                                #print("FLOODCount=%d" % Floodcount)
-                                #setpump=int(testcontract.call().setpump())
-                                #print("SetPump: %i" % bool(setpump))
-                                #print("Water Level % d" % int(distTx))
                                 print (blockno)
                                 timestamp = int (time.time()*1000.0)
                                 testcontract.transact({'from': web3.eth.coinbase, 'gas': 200000, 'value': int(5)}).SendWL()
@@ -322,12 +310,17 @@ if __name__ == '__main__':
                                 b.append (c)
                                 while blockno >= int(web3.eth.blockNumber):
                                         count=count+1
-                                blockno = (web3.eth.blockNumber)2==0:
+                                blockno = (web3.eth.blockNumber)
                                 print (blockno)
                                 testcontract.transact({'from': web3.eth.coinbase, 'gas': 200000, 'value': int(25)}).SendWL()
                                 while blockno >= int(web3.eth.blockNumber):
                                         count=count+1
                                 blockno = (web3.eth.blockNumber)
+                                print (blockno)
+                                while blockno >= int(web3.eth.blockNumber):
+                                        count=count+1
+                                blockno = (web3.eth.blockNumber)
+                                print (blockno)
                         else:
                                 #testcontract.transact({'from': web3.eth.coinbase, 'gas': 100000000, 'value': int(distTx)}).holddata()
                                 print("outside the fence")
