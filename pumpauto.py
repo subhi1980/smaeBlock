@@ -368,6 +368,11 @@ if __name__ == '__main__':
                                  while blockno >= int(web3.eth.blockNumber):
                                          count=count+1
                                  blockno = (web3.eth.blockNumber)
+                                 print (blockno)
+                                 while blockno >= int(web3.eth.blockNumber):
+                                         count=count+1
+                                 blockno = (web3.eth.blockNumber)
+                                 print (blockno)
                         else:
                                 #testcontract.transact({'from': web3.eth.coinbase, 'gas': 100000000, 'value': int(distTx)}).holddata()
                                 print("outside the fence")
