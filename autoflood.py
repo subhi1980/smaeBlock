@@ -312,6 +312,10 @@ if __name__ == '__main__':
                                         count=count+1
                                 blockno = (web3.eth.blockNumber)
                                 print (blockno)
+                                while blockno >= int(web3.eth.blockNumber):
+                                        count=count+1
+                                blockno = (web3.eth.blockNumber)
+                                print (blockno)
                                 testcontract.transact({'from': web3.eth.coinbase, 'gas': 200000, 'value': int(25)}).SendWL()
                                 while blockno >= int(web3.eth.blockNumber):
                                         count=count+1
